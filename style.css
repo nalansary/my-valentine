@@ -1,0 +1,10 @@
+body{
+    background-color: aqua;
+    
+}
+
+#test{
+    border-color: black;
+    border-style: dashed;
+    margin: 100px;
+}
