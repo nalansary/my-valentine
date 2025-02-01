@@ -7,4 +7,6 @@ body{
     border-color: black;
     border-style: dashed;
     margin: 300px;
+    width: 600px;
+    height: 460px;
 }
