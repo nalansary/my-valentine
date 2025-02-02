@@ -1,12 +1,72 @@
-body{
-    background-color: aqua;
-    
+body {
+    background-image: url('images/heartsbackground.jpg');
+    background-size: cover;
+    background-color: pink;
+
 }
 
-#test{
-    border-color: black;
-    border-style: dashed;
-    margin: 300px;
-    width: 600px;
-    height: 460px;
+#gameboy {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    position: relative;
+
+}
+
+.screen {
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: groove;
+    color: white;
+
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    height: 100%;
+    /* Space between rows */
+
+}
+
+.row {
+    display: grid;
+    gap: 10px;
+}
+
+.column1,
+.column2,
+.column3 {
+
+    border-style: dotted;
+}
+
+.column1 {
+    justify-self: end;
+    /* Moves the image to the right */
+    width: 300px;
+    margin-left: 230px;
+
+}
+
+.column2 {
+    justify-self: center;
+    /* Centers horizontally */
+    align-self: center;
+    /* Centers vertically */
+    font-size: 20px;
+}
+
+.column3 {
+    align-self: end;
+    /* Pushes this row to the bottom */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
