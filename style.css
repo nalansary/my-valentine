@@ -13,6 +13,7 @@ body {
     position: relative;
 
 }
+div{overflow: hidden;}
 
 .screen {
     width: 40%;
@@ -27,12 +28,9 @@ body {
 }
 
 .container {
-    width: 100%;
     display: grid;
     gap: 20px;
     height: 100%;
-    /* Space between rows */
-
 }
 
 .row {
@@ -43,7 +41,7 @@ body {
 .column1,
 .column2,
 .column3 {
-
+    font-family: fa;
     border-style: dotted;
 }
 
@@ -57,16 +55,66 @@ body {
 
 .column2 {
     justify-self: center;
-    /* Centers horizontally */
     align-self: center;
-    /* Centers vertically */
-    font-size: 20px;
+    font-size: 40px;
+    animation: float 3s ease-in-out infinite;
+    vertical-align: middle;
+    width: 100%;
+    letter-spacing: .15em;
 }
 
 .column3 {
     align-self: end;
-    /* Pushes this row to the bottom */
-    display: flex;
+    display: inline-block;
     justify-content: flex-start;
     align-items: center;
+    height: 100px;
+    max-width: 100%;
+
+
+}
+
+.typewriter p {
+    
+    display:inline-block;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid pink; /* The typwriter cursor */
+    white-space: nowrap; 
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    word-wrap: break-word; 
+    line-height: 1.5; /* Adjust for better spacing */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: pink; }
+  }
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@font-face {
+    font-family: fa;
+    src: url(ARCADECLASSIC.TTF);
 }
