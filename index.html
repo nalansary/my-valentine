@@ -16,18 +16,11 @@
 
             <div class="container">
                 <div id="top">
-                    <div id="health"><img src="images/healthbar-3.png" width="50%"></div>
+                    <div id="health-bar"><img src="images/healthbar-3.png" width="50%"></div>
                 </div>
 
                 <div id="middle">
                     <p id="start">Press to start</p>
-                    <div id="popup-overlay">
-                        <div id="popup-box">
-                            <p>Do you like this website?</p>
-                            <button class="popup-button btn-yes" onclick="handleYes()">Yes</button>
-                            <button class="popup-button btn-no" onclick="handleNo()">No</button>
-                        </div>
-                    </div>
                 
                 </div>
 
@@ -41,8 +34,14 @@
                 </div>
             </div>
 
+        </div>
 
-
+        <div id="popup-overlay">
+            <div id="popup-box">
+                <p id="the-question">Will you be my valentine?</p>
+                <button class="popup-button btn-yes" onclick="handleYes()">Yes</button>
+                <button class="popup-button btn-no" onclick="handleNo()">No</button>
+            </div>
         </div>
     </div>
 </body>

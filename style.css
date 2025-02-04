@@ -48,7 +48,7 @@ div {
 }
 
 
-#health {
+#health-bar {
     visibility: hidden;
     justify-self: end;
     /* Moves the image to the right */
@@ -109,7 +109,7 @@ div {
 
 
 #bottom,
-#health {
+#health-bar {
 
     animation: fadeIn 7s;
     -webkit-animation: fadeIn 7s;
