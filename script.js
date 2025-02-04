@@ -35,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("middle").style.display = "block";
 });
 
-let music = document.getElementById("background-music");
-music.volume = 0.1;
 
 function showPopup() {
     document.getElementById('popup-overlay').style.display = 'flex';
