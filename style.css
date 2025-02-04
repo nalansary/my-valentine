@@ -13,7 +13,10 @@ body {
     position: relative;
 
 }
-div{overflow: hidden;}
+
+div {
+    overflow: hidden;
+}
 
 .screen {
     width: 40%;
@@ -57,10 +60,11 @@ div{overflow: hidden;}
     justify-self: center;
     align-self: center;
     font-size: 40px;
-    animation: float 3s ease-in-out infinite;
+    animation: float 2s ease-in-out infinite;
     vertical-align: middle;
     width: 100%;
     letter-spacing: .15em;
+
 }
 
 .column3 {
@@ -68,37 +72,49 @@ div{overflow: hidden;}
     display: inline-block;
     justify-content: flex-start;
     align-items: center;
-    height: 100px;
-    max-width: 100%;
-
+    height: auto;
+    width: 100%;
+    padding: 20px;
 
 }
 
-.typewriter p {
-    
-    display:inline-block;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid pink; /* The typwriter cursor */
-    white-space: nowrap; 
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+.type {
+    font-size: large;
+    position: relative;
+    width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-right: 2px solid pink;
     animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-    word-wrap: break-word; 
-    line-height: 1.5; /* Adjust for better spacing */
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: pink; }
-  }
+        typing 3s steps(40) forwards,
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: pink;
+    }
+}
 
 @keyframes float {
     0% {
@@ -117,4 +133,10 @@ div{overflow: hidden;}
 @font-face {
     font-family: fa;
     src: url(ARCADECLASSIC.TTF);
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
