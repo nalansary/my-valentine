@@ -12,6 +12,8 @@ const texts = ["hey babe! :)",
     "and your beautiful smile.",
     "which is why i want to know..."];
 let index = 0;
+
+
 function changeText() {    
     const div = document.getElementById('text');
     
@@ -19,5 +21,11 @@ function changeText() {
         div.textContent = texts[index];
         index++;
     }
+
+    if(index == texts.length) {
+        showPopup();
+    }
     
+    
+
 }

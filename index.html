@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <script src="script.js"></script>
     <script src="dialog.js"></script>
 </head>
@@ -20,6 +21,14 @@
 
                 <div id="middle">
                     <p id="start">Press to start</p>
+                    <div id="popup-overlay">
+                        <div id="popup-box">
+                            <p>Do you like this website?</p>
+                            <button class="popup-button btn-yes" onclick="handleYes()">Yes</button>
+                            <button class="popup-button btn-no" onclick="handleNo()">No</button>
+                        </div>
+                    </div>
+                
                 </div>
 
 

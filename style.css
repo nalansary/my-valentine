@@ -20,7 +20,7 @@ div {
 }
 
 .screen {
-    width: 40%;
+    width: 39%;
     height: 50%;
     position: absolute;
     top: 45%;
@@ -73,13 +73,15 @@ div {
 
 
 #bottom {
+    padding: 5px;
+    border-style: solid;
     align-self: end;
     height: 150px;
     visibility: hidden;
 }
 
 #character {
-    padding-left: 30px;
+    padding-left: 5px;
     float: left;
     width: 150px;
     height: auto;
@@ -97,8 +99,7 @@ div {
 
 
 #text {
-    vertical-align: middle;
-    font-size: large;
+    font-size: 20px;
     overflow: hidden;
     white-space: normal;
     word-wrap: break-word;

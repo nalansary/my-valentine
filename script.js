@@ -36,4 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 let music = document.getElementById("background-music");
-music.volume = 0.5;
+music.volume = 0.1;
+
+
+function showPopup() {
+    document.getElementById('popup-overlay').style.display = 'flex';
+}
+
+function handleYes() {
+    alert('Thank you!');
+    document.getElementById('popup-overlay').style.display = 'none';
+}
+
+function handleNo() {
+    alert('We will try to improve!');
+    document.getElementById('popup-overlay').style.display = 'none';
+}
