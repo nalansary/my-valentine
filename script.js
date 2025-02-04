@@ -1,7 +1,5 @@
-function clearScreen(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}
 const image = document.getElementById('health-bar');
+
 let healthCount = 3;
 
 //Press Start
@@ -45,12 +43,23 @@ function showPopup() {
 }
 
 function handleYes() {
+    var screen = document.getElementById("container");
     const popup = document.getElementById('popup-overlay');
     popup.style.display = 'none';
+    screen.innerHTML = "";
+    
+
+    const gameOverImage = document.createElement('img');
+    gameOverImage.src = "images/pixel-trunks.png";
+    gameOverImage.style.width = "50%";
+    gameOverImage.style.height = "auto";
+    screen.appendChild(gameOverImage);
+    alert("YAAAAAAAAYYYYYYY!!! CAN'T WAIT TO SPEND TIME WITH YOUUUUU <33");
 
 }
 
 function handleNo() {
+    var screen = document.getElementById("container");
     const healthBar = document.getElementById('health-bar').querySelector('img');
     const popup = document.getElementById('popup-overlay');
     healthCount--;
@@ -65,6 +74,18 @@ function handleNo() {
     } else {
         healthBar.style.display = 'none';
         popup.style.display = 'none';
+        screen.innerHTML = "";
+        
+
+        const gameOverImage = document.createElement('img');
+        gameOverImage.src = "images/pixel-yamcha.png";
+        gameOverImage.style.width = "100%";
+        gameOverImage.style.height = "100%";
+        screen.appendChild(gameOverImage);
+        alert("LOOK WHAT YOU DID TO ME. REFRESH AND MAKE BETTER CHOICES >:(");
+    
         
     }
+
+
 }
