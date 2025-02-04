@@ -3,32 +3,35 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="dialog.js"></script>
 </head>
 
 <body>
+    <audio id="background-music" src="extra/1-02. Mr. Dream wo Sagase.mp3" autoplay loop></audio>
     <div id="gameboy">
         <img src="images/gameboyframe.png" width="90%">
-        <div class="screen">
+        <div class="screen" onclick="showHealth();changeText()">
 
             <div class="container">
-                <div class="row">
-                    <div class="column1"><img src="images/healthbar-3.png" width="50%"></div>
-
+                <div id="top">
+                    <div id="health"><img src="images/healthbar-3.png" width="50%"></div>
                 </div>
-                <div class="row">
-                    <div class="column2">TEST2</div>
 
+                <div id="middle">
+                    <p id="start">Press to start</p>
                 </div>
-                <div class="row">
-                    <div class="column3">
-                        
-                <p class="type">Hello World. I am testing a big paragraph here to see if it will wrap the text properly this is crazy bro why is the text wraping in the paragraph but not with the type writer effect</p>
-                        
+
+
+                <div id="bottom">
+                    <div id="character"><img src="images\pixel-mai.png" width="110%"></div>
+                    <div id="dialog">
+                        <div id="text"></div>
                     </div>
 
                 </div>
             </div>
-               
+
 
 
         </div>

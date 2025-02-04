@@ -15,6 +15,7 @@ body {
 }
 
 div {
+
     overflow: hidden;
 }
 
@@ -25,10 +26,10 @@ div {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-style: groove;
     color: white;
 
 }
+
 
 .container {
     width: 100%;
@@ -39,29 +40,28 @@ div {
 
 }
 
-.row {
-    display: grid;
+#top,
+#middle,
+#bottom {
+    font-family: fa;
     gap: 10px;
 }
 
-.column1,
-.column2,
-.column3 {
-    font-family: fa;
-    border-style: dotted;
-}
 
-.column1 {
+#health {
+    visibility: hidden;
     justify-self: end;
     /* Moves the image to the right */
     width: 300px;
     margin-left: 230px;
 
+
 }
 
-.column2 {
+
+#middle {
+    display: block;
     justify-self: center;
-    /* Centers horizontally */
     align-self: center;
     font-size: 40px;
     animation: float 2s ease-in-out infinite;
@@ -71,56 +71,50 @@ div {
 
 }
 
-.column3 {
-    overflow: hidden;
+
+#bottom {
     align-self: end;
-    /* Pushes this row to the bottom */
-    display: flex;
-    justify-content: flex-start;
+    height: 150px;
+    visibility: hidden;
+}
+
+#character {
+    padding-left: 30px;
+    float: left;
+    width: 150px;
+    height: auto;
+}
+
+#dialog {
+    margin-top: 25px;
+    overflow: hidden;
     align-items: center;
     height: auto;
-    padding: 20px;
     text-align: left;
+    padding: 20px;
 }
 
-.type {
-    overflow-wrap: break-word;
+
+
+#text {
+    vertical-align: middle;
     font-size: large;
-    display:inline-block;
-    overflow: hidden; 
-    border-right: .15em solid pink; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    animation: 
-      typing 3.5s steps(40),
-      blink-caret .75s step-end infinite;
-    word-wrap: break-word; 
-    line-height: 1.5; 
-  }
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    letter-spacing: .15em;
 
-
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
 
-    from,
-    to {
-        border-color: transparent
-    }
+#bottom,
+#health {
 
-    50% {
-        border-color: pink;
-    }
+    animation: fadeIn 7s;
+    -webkit-animation: fadeIn 7s;
+    -moz-animation: fadeIn 7s;
+    -o-animation: fadeIn 7s;
+    -ms-animation: fadeIn 7s;
 }
 
 @keyframes float {
@@ -139,11 +133,62 @@ div {
 
 @font-face {
     font-family: fa;
-    src: url(ARCADECLASSIC.TTF);
+    src: url(extra/ARCADECLASSIC.TTF);
 }
 
 @keyframes blink {
     50% {
         border-color: transparent
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
