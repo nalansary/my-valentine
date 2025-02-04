@@ -31,9 +31,12 @@ div {
 }
 
 .container {
+    width: 100%;
     display: grid;
     gap: 20px;
     height: 100%;
+    /* Space between rows */
+
 }
 
 .row {
@@ -58,6 +61,7 @@ div {
 
 .column2 {
     justify-self: center;
+    /* Centers horizontally */
     align-self: center;
     font-size: 40px;
     animation: float 2s ease-in-out infinite;
@@ -68,29 +72,32 @@ div {
 }
 
 .column3 {
+    overflow: hidden;
     align-self: end;
-    display: inline-block;
+    /* Pushes this row to the bottom */
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    width: 100%;
     padding: 20px;
-
+    text-align: left;
 }
 
 .type {
+    overflow-wrap: break-word;
     font-size: large;
-    position: relative;
-    width: 0;
-    max-width: 100%;
-    overflow: hidden;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    border-right: 2px solid pink;
+    display:inline-block;
+    overflow: hidden; 
+    border-right: .15em solid pink; 
+    white-space: nowrap; 
+    margin: 0 auto; 
     animation: 
-        typing 3s steps(40) forwards,
-        blink-caret .75s step-end infinite;
-}
+      typing 3.5s steps(40),
+      blink-caret .75s step-end infinite;
+    word-wrap: break-word; 
+    line-height: 1.5; 
+  }
+
 
 /* The typing effect */
 @keyframes typing {
