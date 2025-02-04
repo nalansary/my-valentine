@@ -4,6 +4,8 @@ let healthCount = 3;
 
 //Press Start
 function showHealth() {
+    const audio = document.getElementById('background-music');
+    audio.play();
     var health = document.getElementById("health-bar");
     var start = document.getElementById("start");
     var middle = document.getElementById("middle");
@@ -35,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("middle").style.display = "block";
 });
 
+document.addEventListener('click', function() {
+    const audio = document.getElementById('background-music');
+    audio.volume = 0.3; // Set volume to 30%
+    audio.muted = false;
+}, { once: true });
 
 function showPopup() {
     document.getElementById('popup-overlay').style.display = 'flex';
@@ -74,7 +81,8 @@ function handleNo() {
         popup.style.display = 'none';
         screen.innerHTML = "";
         
-
+        const audio = document.getElementById('background-music');
+        audio.pause();
         const gameOverImage = document.createElement('img');
         gameOverImage.src = "images/pixel-yamcha.png";
         gameOverImage.style.width = "100%";
